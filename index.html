@@ -6,7 +6,7 @@
 <!-- IMPORTANT for mobile WebView -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-<title>ServiceNow Engagement Messenger – GTM01</title>
+<h1>ServiceNow Engagement Messenger – GTM02</h1>
 
 
 
@@ -15,7 +15,8 @@
 <script>
 SN_CSM_EC.init({
 	moduleID: "https://elitegamingsupportstg.service-now.com/#908dba322bdfb6100dfaf4a4d891bfd7",
-	loadFeature: startChat()
+	loadFeature: SN_CSM_EC.loadEMFeature()
+//	loadFeature: startChat()
 });
 
 function startChat(){ 
