@@ -1,7 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+
+<!-- IMPORTANT for mobile WebView -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+<title>ServiceNow Engagement Messenger – GTM01</title>
+
+
+
+
 <script src="https://elitegamingsupportstg.service-now.com/scripts/sn_csm_ec.js?v=5.6"></script>
 <script>
 SN_CSM_EC.init({
 	moduleID: "https://elitegamingsupportstg.service-now.com/#908dba322bdfb6100dfaf4a4d891bfd7",
-	loadFeature: SN_CSM_EC.loadEMFeature()
+	loadFeature: startChat()
 });
+
+function startChat(){ 
+
+return { 
+		feature: "CHAT",
+		openOnLoad: false,
+		params: { 
+			"topic_id": "aa0e685053130010cf8cddeeff7b127d", 
+			"sysparm_queue":emContext, //pass the value to context vairable to route the chat request.
+		//	"sysparm_delasport_branch":"wl-222", //pass the value to context vairable to route the chat request.
+         //   "sysparm_delasport_player_id":"01234567890" //pass the value to context vairable to route the chat request.
+
+			
+			} 
+	  } 
+}
+
+
+	
 </script>
